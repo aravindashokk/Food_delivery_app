@@ -1,28 +1,35 @@
 .header {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
-    margin: 5px;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
 }
 
 .logo {
-    width: 100px;
+    width: 80px;
+    height: auto;
 }
 
 .nav-items {
-    padding: 0px 20px;
+    margin-right: 20px;
 }
 
-
 .nav-items > ul {
-    font-size: 20px;
+    font-size: 16px;
     display: flex;
     list-style-type: none;
-
 }
 
 .nav-items > ul > li {
     padding: 10px;
-    margin: 10px;
+    margin: 0 15px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
 
+.nav-items > ul > li:hover {
+    color: #ff6600;
 }
