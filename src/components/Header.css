@@ -33,3 +33,20 @@
 .nav-items > ul > li:hover {
     color: #ff6600;
 }
+
+.login {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login:hover {
+    background-color: #ff8533;
+    color: #fff;
+}
+

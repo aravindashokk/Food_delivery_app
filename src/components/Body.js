@@ -7,9 +7,9 @@ import "./Body.css";
 const Body = () => {
     const [listOfRestaurant, setlistOfRestaurant] = useState([]);
 
-    useEffect(()=> {
+    useEffect(() => {
         fetchData();
-    },[]);
+    }, []);
 
     const fetchData = async () => {
         const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
@@ -18,26 +18,27 @@ const Body = () => {
         setlistOfRestaurant(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
     };
 
-    if(listOfRestaurant.length === 0) {
-        return <Shimmer />
-    }
+    //conditional rendering
+    // if(listOfRestaurant.length === 0) {
+    //     return <Shimmer />
+    // }
 
-    return (
+    return listOfRestaurant.length === 0 ? (<Shimmer />) : (
         <div className="body">
             <div className="filter">
-                <button className="filter-btn" 
-                onClick={()=>{
-                    const filteredList = listOfRestaurant.filter(
-                        (res)=> res.info.avgRating>4.4
-                    );
-                    setlistOfRestaurant(filteredList)
-                }}
+                <button className="filter-btn"
+                    onClick={() => {
+                        const filteredList = listOfRestaurant.filter(
+                            (res) => res.info.avgRating > 4.4
+                        );
+                        setlistOfRestaurant(filteredList)
+                    }}
                 >
                     Top Rated Restaurants
                 </button>
             </div>
             <div className="res-container">
-                {listOfRestaurant.map((restaurant)=> (
+                {listOfRestaurant.map((restaurant) => (
                     <RestaurantCard key={restaurant.info.id} resData={restaurant} />
                 ))}
             </div>
