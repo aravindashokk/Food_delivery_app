@@ -6,7 +6,40 @@
 }
 
 .search {
-    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: #ff6600;
+}
+
+.search-btn {
+    margin: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-btn:hover {
+    background-color: #cc5500;
+}
+
+.filter {
+    display: flex;
 }
 
 .filter-btn {
