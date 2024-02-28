@@ -1,4 +1,3 @@
-import './User.css';
 import { useState } from 'react';
 
 const User = ({name}) => {

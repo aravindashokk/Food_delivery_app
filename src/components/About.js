@@ -1,7 +1,6 @@
 import React from 'react';
 // import User from './User';
 import UserClass from './UserClass';
-import './About.css';
 
 const About = () => {
     return (

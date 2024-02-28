@@ -1,5 +1,4 @@
 import {CDN_URL} from "../utils/constants";
-import "./RestaurantCard.css";
 
 
 const RestaurantCard = (props) => {
@@ -14,9 +13,9 @@ const RestaurantCard = (props) => {
         
     } = resData?.info;
     return (
-        <div className="res-card">
-            <img className="res-logo" alt="res-logo" src={CDN_URL+cloudinaryImageId} />
-            <h3>{name}</h3>
+        <div className="res-card m-4 p-4 w-[220px] h-[378px] bg-gray-100 rounded-lg shadow-md transition-shadow duration-300 hover:shadow-lg">
+            <img className="res-logo rounded-lg w-[220px] h-[140px] object-cover" alt="res-logo" src={CDN_URL+cloudinaryImageId} />
+            <h3 className="font-bold py-3 text-lg">{name}</h3>
             <h5>{cuisines.join(", ")}</h5>
             <h5>{avgRating} stars</h5>
             <h5>{costForTwo}</h5>

@@ -1,5 +1,4 @@
 import React from "react";
-import './User.css';
 
 class UserClass extends React.Component {
 
