@@ -35,7 +35,7 @@ const Body = () => {
         <div className="body">
             <div className="filter flex">
                 <div className="search m-4">
-                    <input type="text" className="border border-solid rounded-md h-9 border-gray-300  mr-4 text-base focus:outline-none focus:border-orange-500" value={searchText} onChange={(e)=> {setsearchText(e.target.value);}}/>
+                    <input type="text" className="border border-solid rounded-md h-9 border-gray-300 text-base focus:outline-none focus:border-orange-500" value={searchText} onChange={(e)=> {setsearchText(e.target.value);}}/>
                     <button className="px-4 py-2 bg-[#ff6600] m-4 rounded-md text-slate-50" onClick={()=> {
                         console.log(searchText);
                         const filteredRestaurant = listOfRestaurant.filter((res)=>
@@ -58,7 +58,7 @@ const Body = () => {
                 </button>
                 </div>
             </div>
-            <div className="res-container flex flex-wrap">
+            <div className="res-container flex flex-wrap px-28">
                 {filteredRestaurant.map((restaurant) => (
                     <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>
                 ))}
