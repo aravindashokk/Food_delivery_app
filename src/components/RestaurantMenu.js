@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
             <h1 className='font-bold my-6 text-2xl'>{name}</h1>
             <p className='font-bold text-lg'>{cuisines.join(", ")}- {costForTwoMessage}</p>
             {/* categories accordions */}
-            {categories.map((category)=> <RestaurantCategory data={category?.card?.card}/>)}
+            {categories.map((category)=> <RestaurantCategory key={category?.card?.card.title} data={category?.card?.card}/>)}
         </div>
     );
 };

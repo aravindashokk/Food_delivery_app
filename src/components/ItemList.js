@@ -14,7 +14,10 @@ const ItemList = ({ items }) => {
                         <p className="text-xs">{item.card.info.description}</p>
                     </div>
                     <div className="w-3/12 p-4">
-                        <img src={CDN_URL + item.card.info.imageId} />
+                        <div className="absolute">
+                            <button className="p-2 mx-5 rounded-lg bg-black text-white shadow-lg">Add +</button>
+                        </div>
+                        <img src={CDN_URL + item.card.info.imageId} className="w-full" />
                     </div>
                 </div>
             ))}
